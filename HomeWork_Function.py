@@ -7,3 +7,10 @@ celsius_degree = int(input())
 
 print(dergee_converter_to_fahrenheit(celsius_degree))
 
+# Issue_2
+# Вычисление факториала
+def factorial(num):
+    fact = 1
+    for i in num:
+        fact *= i
+    return fact

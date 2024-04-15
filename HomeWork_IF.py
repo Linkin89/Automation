@@ -21,10 +21,10 @@
 # user_rank(int(input()))
 
 # Issue_3
-def final_price(price):
-    discount = 0.95 if price in list(range(1000, 2001)) else 0.9
-    print(f"Сумма с учётом скидки: {round(price*discount, 2)} рублёв =)")
+# def final_price(price):
+#     discount = 0.95 if price in list(range(1000, 2001)) else 0.9
+#     print(f"Сумма с учётом скидки: {round(price*discount, 2)} рублёв =)")
 
-price = int(input("Введите сумму покупки: "))
+# price = int(input("Введите сумму покупки: "))
 
-final_price(price)
+# final_price(price)

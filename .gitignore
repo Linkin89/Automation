@@ -1,0 +1,5 @@
+Stepik.js
+/__pycache__
+.pytest_cache
+.vscode
+/venv
