@@ -1,16 +1,20 @@
 # Issue_1
-def dergee_converter_to_fahrenheit(num):
-    fahrenheit_degree = num * 9/5 + 32
-    return fahrenheit_degree
+# def dergee_converter_to_fahrenheit(num):
+#     fahrenheit_degree = num * 9/5 + 32
+#     return fahrenheit_degree
 
-celsius_degree = int(input())
+# celsius_degree = int(input())
 
-print(dergee_converter_to_fahrenheit(celsius_degree))
+# print(dergee_converter_to_fahrenheit(celsius_degree))
 
 # Issue_2
 # Вычисление факториала
 def factorial(num):
     fact = 1
-    for i in num:
-        fact *= i
+    for elem in range(1, num+1):
+        fact *= elem
     return fact
+
+random_numbers = int(input())
+
+print(factorial(random_numbers))
