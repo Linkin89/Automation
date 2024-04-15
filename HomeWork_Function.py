@@ -18,6 +18,3 @@ def factorial(num):
 random_numbers = int(input())
 
 print(factorial(random_numbers))
-
-
-print(f'text')
