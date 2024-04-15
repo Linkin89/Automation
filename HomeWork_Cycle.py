@@ -7,6 +7,11 @@
 #             print(i)
 
 
+
+
+dfsfd
+
+
 # user_digit = int(input("Укажите, до какого числа печатать чётные числа"))
 
 # even_digit(user_digit +1)
