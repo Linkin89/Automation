@@ -18,6 +18,15 @@ def test_create_organization(get_base_url_ELK, get_token):
     assert response.status_code == 200, "Организация не создана"
 
 
+def check_organization(get_base_url_ELK, get_token):
+    """
+    Проверка существует ли организация
+    """
+    organization = OrganizationApi(host=get_base_url_ELK, token=get_token)
+
+    response = organization.check_organization()
+
+
 @step("Удаление организации")
 def test_delete_organization(get_base_url_ELK, get_token):
     """

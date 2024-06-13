@@ -46,7 +46,7 @@ class OrganizationApi:
         fake_kpp = ru_spec.kpp()
         fake_email = fake.email()
         fake_name = fake.first_name()
-        fake_full_name = fake.full_name()
+        fake_last_name = fake.last_name()
         fake_patronymic = ru_spec.patronymic()
         
         json_data = {
