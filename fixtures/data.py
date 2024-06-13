@@ -17,4 +17,3 @@ def get_headers(get_token):
         'accept': 'application/json',
         'Authorization' : get_token
     }
-

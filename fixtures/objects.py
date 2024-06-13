@@ -1,36 +1,27 @@
-import requests
+from apis.organizations.organization_api import OrganizationApi
+from pytest import fixture
 from mimesis.builtins import RussiaSpecProvider
 from mimesis import Person
 ru_spec = RussiaSpecProvider()
 fake = Person()
 
+fake_inn = ru_spec.inn()
+fake_ogrn = ru_spec.ogrn()
+fake_kpp = ru_spec.kpp()
+fake_email = fake.email()
+fake_name = fake.first_name()
+fake_last_name = fake.last_name()
+fake_patronymic = ru_spec.patronymic()
+fake_full_name = fake.full_name()
 
-
-class OrganizationApi:
-    def __init__(self, host, token):
-        self.host = f'{host}/hub/organizations'
-        self.headers = {'Authorization': f'{token}'}
-
-
-    def create_organization(self):
-        """
-        Create new organization
-
-        Returns:
-            response: return data of new organization
-        """
-        
-        fake_inn = ru_spec.inn()
-        fake_ogrn = ru_spec.ogrn()
-        fake_kpp = ru_spec.kpp()
-        fake_email = fake.email()
-        fake_name = fake.first_name()
-        fake_last_name = fake.last_name()
-        fake_patronymic = ru_spec.patronymic()
-        fake_full_name = fake.full_name()
-        
-        # Данные для создания организации
-        json_data = {
+@fixture
+def create_organization(get_base_url_ELK, get_token):
+    """
+    docstring
+    """
+    
+    # Данные для создания организации
+    json_data = {
         "law223fl": False,
         "requisites": {
             "residentRequisites": {
@@ -111,26 +102,6 @@ class OrganizationApi:
             }
         ]
     }
-
-        # Создание организации
-        response = requests.post(f'{self.host}', headers=self.headers, json=json_data)
-
-        return response
-
-
-    def check_organization(self, organization_id):
-        """
-        Check organization
-        """
-        # Проверка организации
-        response = requests.get(f'{self.host}/{organization_id}', headers=self.headers)
-        return response
-
-
-    def delete_organization(self, organization_id):
-        """
-        Delete organization
-        """
-        # Удаление организации
-        response = requests.delete(f'{self.host}?id={organization_id}', headers=self.headers)
-        return response
+    organization = OrganizationApi(host=get_base_url_ELK, token=get_token)
+    response = organization.create_organization()
+    return response
