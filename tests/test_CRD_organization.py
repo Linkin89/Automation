@@ -1,5 +1,4 @@
 from apis.organizations.organization_api import OrganizationApi
-from pytest import fixture
 import pytest
 from pprint import pprint
 import jsonschema
