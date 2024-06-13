@@ -21,6 +21,6 @@ def auth_headers():
             }
 
 @fixture
-def get_token(url_get_token, auth_payload, auth_headers):
-    response = requests.post(url_get_token, auth_payload, auth_headers)
+def get_token(url_get_token, auth_payload):
+    response = requests.post(url_get_token, auth_payload)
     return f"Bearer {response.json()['access_token']}"
