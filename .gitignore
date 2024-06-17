@@ -3,4 +3,6 @@ Stepik.js
 __pycache__
 .pytest_cache
 .vscode
-venv
+.venv
+pytest.ini
+allure-results
