@@ -14,11 +14,6 @@ def auth_payload():
             'client_secret' : 'a42f090b-cda5-4b2c-86ab-aa52c42fb061'
             }
 
-@fixture
-def auth_headers():
-    return {
-            'Content-Type': 'application/x-www-form-urlencoded'
-            }
 
 @fixture
 def get_token(url_get_token, auth_payload):
