@@ -13,4 +13,4 @@ def create_organization(get_base_url_ELK, get_token):
     """
     organization = OrganizationApi(host=get_base_url_ELK, token=get_token)
     response = organization.create_organization()
-    return response
+    yield response
