@@ -5,7 +5,6 @@ ru_spec = RussiaSpecProvider()
 fake = Person()
 
 
-
 class OrganizationApi:
     def __init__(self, host, token):
         self.host = f'{host}/hub/organizations'

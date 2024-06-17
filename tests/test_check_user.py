@@ -1,7 +1,4 @@
 import requests
-import pytest
-
-
 
 
 def test_check_user(get_base_url_ELK, get_headers): 

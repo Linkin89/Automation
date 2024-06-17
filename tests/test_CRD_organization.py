@@ -20,7 +20,6 @@ def test_check_organization(create_organization):
     """
     Получение организации
     """
-    # organization = OrganizationApi(host=get_base_url_ELK, token=get_token)
 
     response = create_organization
     status = response.json()['data']['status']
@@ -31,7 +30,7 @@ def test_check_organization(create_organization):
 @step("Удаление организации")
 def test_delete_organization(create_organization, get_base_url_ELK, get_token):
     """
-    Удаление новой организации
+    Удаление организации
     """
         
     # Создание организации и получение её ID
