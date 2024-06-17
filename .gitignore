@@ -5,4 +5,4 @@ __pycache__
 .vscode
 .venv
 allure-results
-token_data
+token_data.py
