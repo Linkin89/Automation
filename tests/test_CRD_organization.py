@@ -13,7 +13,7 @@ def test_create_organization(create_organization):
     response = create_organization
     pprint(response.json())
     assert response.status_code == 200, "Организация не создана"
-
+    print("куку")
 
 @step("Получение организации")
 def test_check_organization(create_organization):
