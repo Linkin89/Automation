@@ -7,11 +7,6 @@ def get_base_url_ELK():
 
 
 @fixture
-def get_base_url_HubAdmin():
-    return
-
-
-@fixture
 def get_headers(get_token):
     return {
         'accept': 'application/json',
